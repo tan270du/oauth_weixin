@@ -6,9 +6,9 @@ spring:
       # 响应页面默认后缀
       suffix: .jsp
       
-appid: wx60c1c374fd9379a2
-secret: b6e4ebc42a5fa9fd1ea7ea440e52d648
-redirectUri: http://moran1995.natapp1.cc/callback
+appid: 
+secret: 
+redirectUri:
 ### 生成微信授权
 authorizedUrl: https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect
 ###获取code后，请求以下链接获取access_token
