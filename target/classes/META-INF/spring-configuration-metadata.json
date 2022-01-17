@@ -1,0 +1,95 @@
+{
+  "groups": [
+    {
+      "name": "swagger",
+      "type": "oauthWeixin.config.SwaggerProperties",
+      "sourceType": "oauthWeixin.config.SwaggerProperties"
+    },
+    {
+      "name": "swagger.contact",
+      "type": "oauthWeixin.config.SwaggerProperties$Contact",
+      "sourceType": "oauthWeixin.config.SwaggerProperties",
+      "sourceMethod": "getContact()"
+    },
+    {
+      "name": "token",
+      "type": "oauthWeixin.config.TokenProperties",
+      "sourceType": "oauthWeixin.config.TokenProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "swagger.contact.email",
+      "type": "java.lang.String",
+      "description": "联系人email",
+      "sourceType": "oauthWeixin.config.SwaggerProperties$Contact"
+    },
+    {
+      "name": "swagger.contact.name",
+      "type": "java.lang.String",
+      "description": "联系人",
+      "sourceType": "oauthWeixin.config.SwaggerProperties$Contact"
+    },
+    {
+      "name": "swagger.contact.url",
+      "type": "java.lang.String",
+      "description": "联系人url",
+      "sourceType": "oauthWeixin.config.SwaggerProperties$Contact"
+    },
+    {
+      "name": "swagger.description",
+      "type": "java.lang.String",
+      "description": "数字验证码位数",
+      "sourceType": "oauthWeixin.config.SwaggerProperties"
+    },
+    {
+      "name": "swagger.enabled",
+      "type": "java.lang.Boolean",
+      "description": "验证码类型",
+      "sourceType": "oauthWeixin.config.SwaggerProperties"
+    },
+    {
+      "name": "swagger.groups",
+      "type": "java.util.List<oauthWeixin.config.SwaggerProperties$Groups>",
+      "description": "组配置",
+      "sourceType": "oauthWeixin.config.SwaggerProperties"
+    },
+    {
+      "name": "swagger.path-mapping",
+      "type": "java.lang.String",
+      "description": "设置请求的统一前缀",
+      "sourceType": "oauthWeixin.config.SwaggerProperties"
+    },
+    {
+      "name": "swagger.title",
+      "type": "java.lang.String",
+      "description": "验证码类别",
+      "sourceType": "oauthWeixin.config.SwaggerProperties"
+    },
+    {
+      "name": "swagger.version",
+      "type": "java.lang.String",
+      "description": "字符验证码长度",
+      "sourceType": "oauthWeixin.config.SwaggerProperties"
+    },
+    {
+      "name": "token.expire-time",
+      "type": "java.lang.Integer",
+      "description": "令牌有效期（默认30分钟）",
+      "sourceType": "oauthWeixin.config.TokenProperties"
+    },
+    {
+      "name": "token.header",
+      "type": "java.lang.String",
+      "description": "令牌自定义标识",
+      "sourceType": "oauthWeixin.config.TokenProperties"
+    },
+    {
+      "name": "token.secret",
+      "type": "java.lang.String",
+      "description": "令牌秘钥",
+      "sourceType": "oauthWeixin.config.TokenProperties"
+    }
+  ],
+  "hints": []
+}

@@ -1,6 +1,7 @@
 package oauthWeixin.base;
 
-import oauthWeixin.utils.Constants;
+import oauthWeixin.entity.ResponseBase;
+import oauthWeixin.service.Constants;
 import org.springframework.stereotype.Component;
 
 
@@ -37,7 +38,8 @@ public class BaseApiService {
 
 	// 通用封装
 	public ResponseBase setResult(Integer code, String msg, Object data) {
-		return new ResponseBase(code, msg, data);
+		ResponseBase responseBase = new ResponseBase(code, msg, data);
+		return responseBase;
 	}
 
 }

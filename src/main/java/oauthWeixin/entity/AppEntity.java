@@ -4,7 +4,6 @@ import lombok.Data;
 
 @Data
 public class AppEntity {
-
 	private long id;
 	private String appId;
 	private String appName;

@@ -1,7 +1,6 @@
 package oauthWeixin.utils;
 
-import java.io.IOException;
-
+import com.alibaba.fastjson.JSONObject;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.config.RequestConfig;
@@ -15,14 +14,14 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.alibaba.fastjson.JSONObject;
+import java.io.IOException;
 
 /**
  * HttpClient4.3工具类
- *
  */
 public class HttpClientUtils {
-	private static Logger logger = LoggerFactory.getLogger(HttpClientUtils.class); // 日志记录
+	// 日志记录
+	private static final Logger logger = LoggerFactory.getLogger(HttpClientUtils.class);
 
 	private static RequestConfig requestConfig = null;
 
@@ -33,12 +32,6 @@ public class HttpClientUtils {
 
 	/**
 	 * post请求传输json参数
-	 * 
-	 * @param url
-	 *            url地址
-	 * @param json
-	 *            参数
-	 * @return
 	 */
 	public static JSONObject httpPost(String url, JSONObject jsonParam) {
 		// post请求返回结果

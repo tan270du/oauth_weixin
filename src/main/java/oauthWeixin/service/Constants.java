@@ -1,4 +1,4 @@
-package oauthWeixin.utils;
+package oauthWeixin.service;
 
 public interface Constants {
 	// 响应请求成功
