@@ -2,6 +2,7 @@ package oauthWeixin.config;
 
 import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import com.github.xiaoymin.knife4j.spring.extension.OpenApiExtensionResolver;
+import oauthWeixin.utils.SpringUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;

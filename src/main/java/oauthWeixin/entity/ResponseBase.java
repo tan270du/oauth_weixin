@@ -5,15 +5,18 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 @Data
 @AllArgsConstructor
 @ApiModel("请求响应对象")
-@Slf4j
 public class ResponseBase<T> {
 	
 	private static final long serialVersionUID = 1L;
+
+	final static Logger logger = LoggerFactory.getLogger(ResponseBase.class);
 
 	/**
 	 * 状态码
@@ -34,12 +37,9 @@ public class ResponseBase<T> {
 	private T data;
 
 	public static void main(String[] args) {
-		ResponseBase responseBase = new ResponseBase();
-		responseBase.setData("123456");
-		responseBase.setMsg("success");
-		responseBase.setRtnCode(200);
-		System.out.println(responseBase.toString());
-		log.info("itmayiedu...");
+		ResponseBase<String> responseBase = new ResponseBase<>(200,"success","123456");
+		System.out.println(responseBase);
+		logger.info("itmayiedu...");
 	}
 
 	@Override
