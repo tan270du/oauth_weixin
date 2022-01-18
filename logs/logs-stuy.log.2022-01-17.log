@@ -1,0 +1,257 @@
+2022-01-17 11:39:39.860 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.yaml.snakeyaml.scanner.ScannerException: while scanning for the next token
+found character '@' that cannot start any token. (Do not use @ for indentation)
+ in 'reader', line 53, column 15:
+      production: @knife4j.production@
+                  ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:439)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:665)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:119)
+	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:214)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:184)
+	at org.yaml.snakeyaml.composer.Composer.composeKeyNode(Composer.java:310)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:301)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:286)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:188)
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:314)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:305)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:286)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:188)
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:115)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.getData(OriginTrackedYamlLoader.java:99)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:198)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:166)
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84)
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36)
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:107)
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:128)
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:86)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:121)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:240)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:227)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:102)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:94)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:102)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:87)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:296)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at oauthWeixin.AppOauth.main(AppOauth.java:11)
+2022-01-17 11:40:37.215 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 26140 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-17 11:40:37.219 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-17 11:40:38.706 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-17 11:40:38.718 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:40:38.719 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-17 11:40:38.719 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-17 11:40:38.868 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-17 11:40:38.868 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1589 ms
+2022-01-17 11:40:39.696 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:40:39.720 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-17 11:40:39.726 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2022-01-17 11:40:40.125 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:40:40.126 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2022-01-17 11:40:40.134 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:40:40.136 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:40:40.143 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-17 11:40:40.172 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at oauthWeixin.AppOauth.main(AppOauth.java:11)
+Caused by: java.lang.NullPointerException: null
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 common frames omitted
+2022-01-17 11:43:00.893 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 13104 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-17 11:43:00.896 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-17 11:43:02.321 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-17 11:43:02.331 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:43:02.332 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-17 11:43:02.332 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-17 11:43:02.480 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-17 11:43:02.480 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1523 ms
+2022-01-17 11:43:03.341 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:43:03.358 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-17 11:43:03.448 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 3.171 seconds (JVM running for 5.321)
+2022-01-17 11:53:45.773 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 14932 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-17 11:53:45.778 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-17 11:53:47.273 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-17 11:53:47.304 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:53:47.307 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-17 11:53:47.308 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-17 11:53:47.532 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-17 11:53:47.532 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1693 ms
+2022-01-17 11:53:48.461 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:53:48.483 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-17 11:53:48.566 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 3.336 seconds (JVM running for 5.379)
+2022-01-17 11:54:18.575 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 24424 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-17 11:54:18.579 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-17 11:54:19.914 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-17 11:54:19.925 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:54:19.926 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-17 11:54:19.926 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-17 11:54:20.061 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-17 11:54:20.061 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1423 ms
+2022-01-17 11:54:20.849 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:54:20.869 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-17 11:54:20.948 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 2.891 seconds (JVM running for 4.617)
+2022-01-17 11:54:45.962 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 14904 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-17 11:54:45.965 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-17 11:54:47.333 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-17 11:54:47.343 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:54:47.344 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-17 11:54:47.344 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-17 11:54:47.479 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-17 11:54:47.479 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1462 ms
+2022-01-17 11:54:48.270 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:54:48.287 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-17 11:54:48.361 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 2.967 seconds (JVM running for 4.609)
+2022-01-17 11:56:36.717 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 3084 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-17 11:56:36.721 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-17 11:56:38.287 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-17 11:56:38.296 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:56:38.298 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-17 11:56:38.298 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-17 11:56:38.444 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-17 11:56:38.444 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1656 ms
+2022-01-17 11:56:39.348 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:56:39.370 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-17 11:56:39.449 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 3.297 seconds (JVM running for 5.156)
+2022-01-17 11:57:29.478 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 11380 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-17 11:57:29.482 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-17 11:57:30.863 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-17 11:57:30.873 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:57:30.874 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-17 11:57:30.875 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-17 11:57:31.031 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-17 11:57:31.032 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1482 ms
+2022-01-17 11:57:31.802 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-17 11:57:31.822 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-17 11:57:31.895 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 2.907 seconds (JVM running for 4.592)
+2022-01-17 17:56:23.839 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 14116 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-17 17:56:23.845 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-17 17:56:26.048 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-17 17:56:26.065 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-17 17:56:26.066 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-17 17:56:26.067 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-17 17:56:26.292 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-17 17:56:26.293 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2365 ms
+2022-01-17 17:56:27.394 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-17 17:56:27.418 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-17 17:56:27.504 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 4.416 seconds (JVM running for 8.185)
+2022-01-17 17:56:51.815 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-17 17:56:51.815 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-17 17:56:51.818 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2022-01-17 18:03:08.466 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 27196 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-17 18:03:08.471 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-17 18:03:10.086 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-17 18:03:10.103 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-17 18:03:10.104 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-17 18:03:10.105 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-17 18:03:10.274 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-17 18:03:10.274 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1739 ms
+2022-01-17 18:03:11.147 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-17 18:03:11.169 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-17 18:03:11.319 [main] ERROR s.d.spring.web.scanners.ApiDescriptionReader - Skipping process path[/callback], method[callback] as it has an error.
+java.lang.NoClassDefFoundError: javax/validation/constraints/NotBlank
+	at springfox.bean.validators.plugins.parameter.NotBlankAnnotationPlugin.apply(NotBlankAnnotationPlugin.java:51)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsManager.parameter(DocumentationPluginsManager.java:117)
+	at springfox.documentation.spring.web.readers.operation.OperationParameterReader.readParameters(OperationParameterReader.java:126)
+	at springfox.documentation.spring.web.readers.operation.OperationParameterReader.apply(OperationParameterReader.java:81)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsManager.operation(DocumentationPluginsManager.java:144)
+	at springfox.documentation.spring.web.readers.operation.ApiOperationReader.read(ApiOperationReader.java:72)
+	at springfox.documentation.spring.web.scanners.CachingOperationReader.lambda$new$0(CachingOperationReader.java:43)
+	at java.util.HashMap.computeIfAbsent(HashMap.java:1127)
+	at springfox.documentation.spring.web.scanners.CachingOperationReader.read(CachingOperationReader.java:48)
+	at springfox.documentation.spring.web.scanners.ApiDescriptionReader.read(ApiDescriptionReader.java:72)
+	at springfox.documentation.spring.web.scanners.ApiListingScanner.scan(ApiListingScanner.java:169)
+	at springfox.documentation.spring.web.scanners.ApiDocumentationScanner.scan(ApiDocumentationScanner.java:67)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.scanDocumentation(AbstractDocumentationPluginsBootstrapper.java:96)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at oauthWeixin.AppOauth.main(AppOauth.java:11)
+Caused by: java.lang.ClassNotFoundException: javax.validation.constraints.NotBlank
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 30 common frames omitted
+2022-01-17 18:03:11.349 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 3.422 seconds (JVM running for 5.532)
