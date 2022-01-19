@@ -25,14 +25,12 @@ userinfo: https://api.weixin.qq.com/sns/userinfo?access_token=ACCESS_TOKEN&openi
 swagger:
   # 是否开启swagger
   enabled: true
-  # 请求前缀
-  pathMapping: /dev-api
   # 标题
-  title: '标题：${ruoyi.name}后台管理系统_接口文档'
+  title: '标题：${ruoyi-vue-sso.name}后台管理系统_接口文档'
   # 描述
-  description: '描述：用于管理集团旗下公司的人员信息,具体包括XXX,XXX模块...'
+  description: '描述：用于管理集团旗下公司所有人员权限问题'
   # 版本
-  version: '版本号: ${ruoyi-vue-plus.version}'
+  version: '版本号: ${ruoyi-vue-sso.version}'
   # 作者信息
   contact:
     name: renq
@@ -55,7 +53,5 @@ knife4j:
     enableDynamicParameter: true
     # 是否在每个Debug调试栏后显示刷新变量按钮
     enableReloadCacheParameter: true
-
-
 
  

@@ -4,9 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.moran</groupId>
-    <artifactId>oauth_weixin</artifactId>
-    <version>1.0.0</version>
+    <groupId>com.trasen</groupId>
+    <artifactId>ruoyi-vue-sso</artifactId>
+    <version>v1.0.0</version>
+    <name>RuoYi-Vue-SSO</name>
+    <url>https://gitee.com/JavaLionLi/RuoYi-Vue-Plus</url>
+    <description>RuoYi-Vue-SSO单点登录系统</description>
 
     <properties>
         <spring-boot.version>2.5.8</spring-boot.version>

@@ -2,8 +2,7 @@ package oauthWeixin.config;
 
 import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import com.github.xiaoymin.knife4j.spring.extension.OpenApiExtensionResolver;
-import oauthWeixin.utils.SpringUtils;
-import org.apache.commons.lang3.StringUtils;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -36,6 +35,7 @@ public class SwaggerConfig {
      * 创建API
      */
     @PostConstruct
+	@Bean
     public void createRestApi() {
 		for (SwaggerProperties.Groups group : swaggerProperties.getGroups()) {
 			String basePackage = group.getBasePackage();
@@ -53,10 +53,11 @@ public class SwaggerConfig {
 					.paths(PathSelectors.any())
 					.build()
 					.groupName(group.getName())
-                    .extensions(openApiExtensionResolver.buildExtensions(group.getName()))
-					.pathMapping(swaggerProperties.getPathMapping());
-			String beanName = StringUtils.substringAfterLast(basePackage, ".") + "Docket";
-			SpringUtils.registerBean(beanName, docket);
+                    .extensions(openApiExtensionResolver.buildExtensions(group.getName()));
+					//前缀路径
+					//.pathMapping(swaggerProperties.getPathMapping());
+//			String beanName = StringUtils.substringAfterLast(basePackage, ".") + "Docket";
+//			SpringUtils.registerBean(beanName, docket);
 		}
     }
 

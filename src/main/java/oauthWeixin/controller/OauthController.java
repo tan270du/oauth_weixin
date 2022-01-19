@@ -1,30 +1,38 @@
 package oauthWeixin.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import oauthWeixin.base.BaseApiService;
 import oauthWeixin.utils.HttpClientUtils;
 import oauthWeixin.utils.WeiXinUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
-
+@Api(tags = "登录模块Controller")
 @Controller
 public class OauthController extends BaseApiService {
+	final static Logger logger = LoggerFactory.getLogger(OauthController.class);
 
 	@Autowired
 	private WeiXinUtils weiXinUtils;
-	private String errorPage = "errorPage";
 
 	// 生成授权链接
-	@RequestMapping("/authorizedUrl")
+	@GetMapping("/authorizedUrl")
+	@ApiOperation("授权url")
 	public String authorizedUrl() {
+		logger.info("请求授权url");
 		return "redirect:" + weiXinUtils.getAuthorizedUrl();
 	}
 
 	// 微信授权回调地址
-	@RequestMapping("/callback")
+	@PostMapping("/callback")
+	@ApiOperation("微信返回地址")
 	public String callback(String code, HttpServletRequest request) {
 		// 1.使用Code 获取 access_token
 		String accessTokenUrl = weiXinUtils.getAccessTokenUrl(code);
@@ -33,6 +41,7 @@ public class OauthController extends BaseApiService {
 
 		if (containsKey) {
 			request.setAttribute("errorMsg", "系统错误!");
+			String errorPage = "errorPage";
 			return errorPage;
 		}
 		// 2.使用access_token获取用户信息
