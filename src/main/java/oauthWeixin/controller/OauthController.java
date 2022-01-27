@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.UnsupportedEncodingException;
+
 @Api(tags = "登录模块Controller")
 @Controller
 public class OauthController extends BaseApiService {
@@ -25,7 +27,7 @@ public class OauthController extends BaseApiService {
 	// 生成授权链接
 	@GetMapping("/authorizedUrl")
 	@ApiOperation("授权url")
-	public String authorizedUrl() {
+	public String authorizedUrl() throws UnsupportedEncodingException {
 		logger.info("请求授权url");
 		return "redirect:" + weiXinUtils.getAuthorizedUrl();
 	}
@@ -33,7 +35,7 @@ public class OauthController extends BaseApiService {
 	// 微信授权回调地址
 	@PostMapping("/callback")
 	@ApiOperation("微信返回地址")
-	public String callback(String code, HttpServletRequest request) {
+	public boolean callback(String code, HttpServletRequest request) {
 		// 1.使用Code 获取 access_token
 		String accessTokenUrl = weiXinUtils.getAccessTokenUrl(code);
 		JSONObject resultAccessToken = HttpClientUtils.httpGet(accessTokenUrl);
@@ -42,7 +44,7 @@ public class OauthController extends BaseApiService {
 		if (containsKey) {
 			request.setAttribute("errorMsg", "系统错误!");
 			String errorPage = "errorPage";
-			return errorPage;
+			return false;
 		}
 		// 2.使用access_token获取用户信息
 		String accessToken = resultAccessToken.getString("access_token");
@@ -54,7 +56,7 @@ public class OauthController extends BaseApiService {
 		request.setAttribute("nickname", userInfoResult.getString("nickname"));
 		request.setAttribute("city", userInfoResult.getString("city"));
 		request.setAttribute("headimgurl", userInfoResult.getString("headimgurl"));
-		return "info";
+		return true;
 	}
 
 }

@@ -6,11 +6,10 @@
  */
 package oauthWeixin.utils;
 
-import java.net.URLEncoder;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.io.UnsupportedEncodingException;
 
 @Component
 public class WeiXinUtils {
@@ -27,8 +26,8 @@ public class WeiXinUtils {
 	@Value("${userinfo}")
 	private String userinfo;
 
-	public String getAuthorizedUrl() {
-		return authorizedUrl.replace("APPID", appId).replace("REDIRECT_URI", URLEncoder.encode(redirectUri));
+	public String getAuthorizedUrl() throws UnsupportedEncodingException {
+		return authorizedUrl.replace("APPID", appId).replace("REDIRECT_URI",redirectUri);
 	}
 
 	public String getAccessTokenUrl(String code) {

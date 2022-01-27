@@ -1,0 +1,284 @@
+2022-01-18 09:25:15.380 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 30072 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 09:25:15.386 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 09:25:16.863 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 09:25:16.875 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 09:25:16.876 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 09:25:16.876 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 09:25:17.026 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 09:25:17.026 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1583 ms
+2022-01-18 09:25:17.854 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 09:25:17.880 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 09:25:18.006 [main] ERROR s.d.spring.web.scanners.ApiDescriptionReader - Skipping process path[/callback], method[callback] as it has an error.
+java.lang.NoClassDefFoundError: javax/validation/constraints/NotBlank
+	at springfox.bean.validators.plugins.parameter.NotBlankAnnotationPlugin.apply(NotBlankAnnotationPlugin.java:51)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsManager.parameter(DocumentationPluginsManager.java:117)
+	at springfox.documentation.spring.web.readers.operation.OperationParameterReader.readParameters(OperationParameterReader.java:126)
+	at springfox.documentation.spring.web.readers.operation.OperationParameterReader.apply(OperationParameterReader.java:81)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsManager.operation(DocumentationPluginsManager.java:144)
+	at springfox.documentation.spring.web.readers.operation.ApiOperationReader.read(ApiOperationReader.java:72)
+	at springfox.documentation.spring.web.scanners.CachingOperationReader.lambda$new$0(CachingOperationReader.java:43)
+	at java.util.HashMap.computeIfAbsent(HashMap.java:1127)
+	at springfox.documentation.spring.web.scanners.CachingOperationReader.read(CachingOperationReader.java:48)
+	at springfox.documentation.spring.web.scanners.ApiDescriptionReader.read(ApiDescriptionReader.java:72)
+	at springfox.documentation.spring.web.scanners.ApiListingScanner.scan(ApiListingScanner.java:169)
+	at springfox.documentation.spring.web.scanners.ApiDocumentationScanner.scan(ApiDocumentationScanner.java:67)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.scanDocumentation(AbstractDocumentationPluginsBootstrapper.java:96)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at oauthWeixin.AppOauth.main(AppOauth.java:11)
+Caused by: java.lang.ClassNotFoundException: javax.validation.constraints.NotBlank
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 30 common frames omitted
+2022-01-18 09:25:18.030 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 3.169 seconds (JVM running for 6.312)
+2022-01-18 09:29:33.675 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 09:29:33.675 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 16840 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 09:29:33.680 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 09:29:35.135 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 09:29:35.147 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 09:29:35.148 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 09:29:35.148 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 09:29:35.299 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 09:29:35.300 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1567 ms
+2022-01-18 09:29:36.094 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 09:29:36.118 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 09:29:36.301 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 3.194 seconds (JVM running for 5.268)
+2022-01-18 15:22:48.281 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 25720 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 15:22:48.281 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 15:22:48.286 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 15:22:50.010 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 15:22:50.028 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 15:22:50.030 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 15:22:50.030 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 15:22:50.197 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 15:22:50.198 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1827 ms
+2022-01-18 15:22:51.127 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 15:22:51.160 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 15:22:51.264 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 15:22:51.265 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-18 15:22:51.266 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-01-18 15:22:51.519 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 3.788 seconds (JVM running for 5.989)
+2022-01-18 15:47:50.736 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 30804 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 15:47:50.736 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 15:47:50.740 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 15:47:52.432 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 15:47:52.456 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 15:47:52.462 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 15:47:52.464 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 15:47:52.735 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 15:47:52.736 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1936 ms
+2022-01-18 15:47:53.872 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 15:47:53.900 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 15:47:54.096 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 3.923 seconds (JVM running for 6.291)
+2022-01-18 15:48:25.402 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 15:48:25.402 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-18 15:48:25.405 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-01-18 15:50:16.182 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 25244 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 15:50:16.182 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 15:50:16.185 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 15:50:17.825 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 15:50:17.837 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 15:50:17.838 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 15:50:17.838 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 15:50:17.995 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 15:50:17.997 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1751 ms
+2022-01-18 15:50:19.378 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 15:50:19.422 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 15:50:19.760 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 4.098 seconds (JVM running for 6.379)
+2022-01-18 15:50:21.553 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 15:50:21.554 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-18 15:50:21.560 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2022-01-18 16:08:39.336 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 18648 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 16:08:39.336 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 16:08:39.341 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 16:08:40.888 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 16:08:40.899 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 16:08:40.899 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 16:08:40.900 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 16:08:41.056 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 16:08:41.057 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1649 ms
+2022-01-18 16:08:41.888 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 16:08:41.915 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 16:08:42.110 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 3.321 seconds (JVM running for 5.745)
+2022-01-18 16:09:27.150 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 16:09:27.151 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-18 16:09:27.155 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2022-01-18 16:18:32.315 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 17464 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 16:18:32.319 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 16:18:32.319 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 16:18:34.187 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 16:18:34.204 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 16:18:34.205 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 16:18:34.206 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 16:18:34.370 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 16:18:34.370 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1978 ms
+2022-01-18 16:18:35.325 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 16:18:35.355 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 16:18:35.553 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 4.005 seconds (JVM running for 6.354)
+2022-01-18 16:18:49.460 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 16:18:49.461 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-18 16:18:49.463 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-01-18 16:38:06.254 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 24956 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 16:38:06.254 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 16:38:06.258 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 16:38:08.419 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 16:38:08.434 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 16:38:08.435 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 16:38:08.435 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 16:38:08.632 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 16:38:08.633 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2296 ms
+2022-01-18 16:38:09.524 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 16:38:09.556 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 16:38:09.817 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 4.154 seconds (JVM running for 6.623)
+2022-01-18 16:39:04.697 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 16:39:04.698 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-18 16:39:04.708 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2022-01-18 16:44:52.926 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 16:44:52.926 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 22816 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 16:44:52.933 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 16:44:55.005 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 16:44:55.024 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 16:44:55.025 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 16:44:55.026 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 16:44:55.227 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 16:44:55.229 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2182 ms
+2022-01-18 16:44:56.259 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 16:44:56.287 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 16:44:56.643 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 4.463 seconds (JVM running for 7.028)
+2022-01-18 16:45:00.293 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 16:45:00.294 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-18 16:45:00.300 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2022-01-18 16:46:11.750 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 26024 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 16:46:11.749 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 16:46:11.755 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 16:46:13.593 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 16:46:13.626 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 16:46:13.626 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 16:46:13.627 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 16:46:13.827 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 16:46:13.828 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2009 ms
+2022-01-18 16:46:14.696 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 16:46:14.736 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 16:46:15.059 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 3.952 seconds (JVM running for 6.343)
+2022-01-18 16:46:20.589 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 16:46:20.590 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-18 16:46:20.593 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-01-18 16:52:21.889 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 16:52:21.889 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 34056 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 16:52:21.896 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 16:52:24.153 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 16:52:24.166 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 16:52:24.168 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 16:52:24.168 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 16:52:24.333 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 16:52:24.334 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2348 ms
+2022-01-18 16:52:25.404 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 16:52:25.448 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 16:52:25.875 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 4.711 seconds (JVM running for 8.101)
+2022-01-18 16:52:26.997 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 16:52:26.998 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-18 16:52:27.001 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2022-01-18 17:06:46.137 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 31056 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 17:06:46.136 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 17:06:46.142 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 17:06:48.193 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 17:06:48.207 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 17:06:48.208 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 17:06:48.208 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 17:06:48.399 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 17:06:48.400 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2180 ms
+2022-01-18 17:06:49.510 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 17:06:49.539 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 17:06:49.904 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 4.36 seconds (JVM running for 6.943)
+2022-01-18 17:09:04.135 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 17:09:04.137 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-18 17:09:04.148 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2022-01-18 17:15:57.663 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 31728 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 17:15:57.681 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 17:15:57.703 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 17:16:02.435 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 17:16:02.450 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 17:16:02.450 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 17:16:02.451 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 17:16:02.629 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 17:16:02.630 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4391 ms
+2022-01-18 17:16:03.625 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 17:16:03.657 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 17:16:03.750 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 17:16:03.750 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-18 17:16:03.753 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2022-01-18 17:16:04.126 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 8.303 seconds (JVM running for 13.185)
+2022-01-18 17:34:28.681 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 32196 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 17:34:28.679 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 17:34:28.686 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 17:34:30.865 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 17:34:30.885 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 17:34:30.886 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 17:34:30.886 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 17:34:31.072 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 17:34:31.073 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2296 ms
+2022-01-18 17:34:32.195 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 17:34:32.231 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 17:34:32.562 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 4.5 seconds (JVM running for 7.019)
+2022-01-18 17:44:35.704 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 33772 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 17:44:35.704 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 17:44:35.711 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 17:44:37.877 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 17:44:37.891 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 17:44:37.892 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 17:44:37.892 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 17:44:38.087 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 17:44:38.088 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2272 ms
+2022-01-18 17:44:39.189 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 17:44:39.218 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 17:44:39.560 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 4.644 seconds (JVM running for 8.26)
+2022-01-18 17:45:12.831 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 17:45:12.832 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-18 17:45:12.839 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2022-01-18 17:46:21.928 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 14148 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 17:46:21.925 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 17:46:21.934 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 17:46:23.919 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 17:46:23.935 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 17:46:23.936 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 17:46:23.936 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 17:46:24.127 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 17:46:24.127 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2104 ms
+2022-01-18 17:46:25.218 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 17:46:25.245 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 17:46:25.630 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 4.362 seconds (JVM running for 7.308)
+2022-01-18 17:47:32.683 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 17:47:32.683 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-18 17:47:32.686 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2022-01-18 17:56:14.638 [main] INFO  oauthWeixin.AppOauth - Starting AppOauth using Java 1.8.0_301 on DESKTOP-Q453TOJ with PID 35504 (C:\github\oauth_weixin\target\classes started by Adnim in C:\github\oauth_weixin)
+2022-01-18 17:56:14.643 [main] INFO  oauthWeixin.AppOauth - No active profile set, falling back to default profiles: default
+2022-01-18 17:56:14.644 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+2022-01-18 17:56:16.393 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-18 17:56:16.405 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-18 17:56:16.406 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-18 17:56:16.406 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-18 17:56:16.564 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-18 17:56:16.564 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1843 ms
+2022-01-18 17:56:17.513 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-18 17:56:17.556 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-18 17:56:17.828 [main] INFO  oauthWeixin.AppOauth - Started AppOauth in 3.771 seconds (JVM running for 6.509)
+2022-01-18 17:59:17.417 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 17:59:17.417 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-18 17:59:17.420 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-01-18 17:59:17.456 [http-nio-8080-exec-1] INFO  oauthWeixin.controller.OauthController - 请求授权url
